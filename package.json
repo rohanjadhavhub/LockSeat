@@ -1,0 +1,26 @@
+{
+  "name": "lockseat",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/server.ts",
+    "start": "node --env-file=.env src/server.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "test": "node --env-file=.env --test test/*.test.ts",
+    "seed": "node --env-file=.env scripts/seed.ts"
+  },
+  "dependencies": {
+    "fastify": "^5.12.7",
+    "ioredis": "^6.0.0",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/pg": "^8.23.1",
+    "oxlint": "^1.88.0",
+    "typescript": "^7.0.2"
+  }
+}
